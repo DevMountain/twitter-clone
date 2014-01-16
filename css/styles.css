@@ -1,0 +1,262 @@
+/*
+
+Things to remember:
+
+1. Always use proper indentation in your css and html
+2. An "#" selector or 'id' will override a '.' selector or 'class'
+3. A '.' selector will override a native selector, like 'div'
+
+*/
+
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+body {
+	background-image: url(https://abs.twimg.com/images/themes/theme9/bg.gif);
+	background-repeat: no-repeat;
+	background-color: #1A1B1F;
+	font-family: "Helvetica Neue",Arial,sans-serif;
+}
+
+/* GLOBAL ELEMENTS */
+.avatar {
+	width: 32px;
+	height: 32px;
+	border-radius: 4px;
+}
+.button {
+	color: #fff;
+	text-shadow: 0 -1px 1px rgba(0,0,0,.25);
+	background-color: #019ad2;
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(#33bcef,#019ad2);
+	background-image: -ms-linear-gradient(#33bcef,#019ad2);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#33bcef),color-stop(100%,#019ad2));
+	background-image: -webkit-linear-gradient(#33bcef,#019ad2);
+	background-image: -o-linear-gradient(#33bcef,#019ad2);
+	background-image: linear-gradient(#33bcef,#019ad2);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bcef',endColorstr='#019ad2',GradientType=0);
+	border-color: #057ed0;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.1);;
+	display: inline-block;
+	padding: 5px 10px;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 18px;
+	border: 1px solid #019ad2;
+	cursor: pointer;
+	border-radius: 4px;
+}
+.button:disabled {
+	color: #777;
+	text-shadow: 0 1px 1px rgba(255,255,255,.75);
+	cursor: default;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #ddd;
+	background-image: none;
+	filter: alpha(opacity=65);
+	opacity: .65;
+	-webkit-box-shadow: none;
+	box-shadow: none;background: #f5f5f5;
+	padding: 5px 10px;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+/* PAGE STRUCTURE */
+#page-container {
+	padding: 54px 14px 15px;
+	margin: 0 auto;
+	width: 837px;
+}
+#main {
+	float: right;
+	width: 522px;
+	background-color: white;
+	border-radius: 6px;
+}
+	#main h2 {
+		font-size: 18px;
+		padding: 12px;
+		border-bottom: 1px solid #e8e8e8;
+	}
+
+/* DASHBOARD */
+#dashboard {
+	border-radius: 6px;
+	background-color: white;
+	float: left;
+	width: 302px;
+}
+	/* Profile */
+	#profile-summary, #tweet-content {
+		padding: 12px;
+	}
+		#profile-summary .avatar {
+			position: absolute;
+			top: 0;.twe
+			left: 0;
+		}
+		#profile-summary .content {
+			position: relative;
+			border-bottom: 1px solid #e8e8e8;
+			min-height: 40px;
+		}
+		#profile-summary .content p {
+			margin-left: 42px;
+			font-weight: bold;
+			font-size: 14px;
+			text-shadow: 0 1px 0 #fff;
+		}
+
+		#tweet-content {
+			padding-top: 0;
+		}
+
+	/* Compose Tweet */
+	.tweet-compose {
+		width: 100%;
+		height: 2.5em;
+		font-size: 13px;
+		padding: 5px;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		margin-bottom: 1em;
+		box-sizing: border-box;
+	}
+		#tweet-controls {
+			text-align: right;
+		}
+			#tweet-controls div {
+				display: inline-block;
+			}
+			#char-count {
+				font-size: 14px;
+				color: #999;
+				text-shadow: 0 1px 1px rgba(255,255,255,.75);
+			}
+
+/* TWEET */
+.tweet {
+	clear: both;
+	padding: 9px 12px;
+	border-bottom: 1px solid #e8e8e8;
+	min-height: 60px;
+	border-radius: 6px;
+}
+
+	.tweet .avatar {
+		float: left;
+		margin-right: 10px;
+	}
+	.tweet .fullname {
+		font-size: 14px;
+	}
+	.tweet .username {
+		font-size: 12px;
+		color: #999;
+	}
+	.tweet-text {
+		font-size: 14px;
+		color: #333;
+		margin: 10px 0;
+		padding-left: 42px;
+	}
+
+	.tweet-actions {
+		text-align: right;
+	}
+		.tweet-actions ul {
+			list-style-type: none;
+		}
+			.tweet-actions li {
+				display: inline-block;
+				font-size: 12px;
+				color: #2FC2EF;
+				cursor: pointer;
+				margin-right: 2px;
+			}
+
+	.icon {
+		color: #2FC2EF;
+		background-color: #2FC2EF;
+		width: 12px;
+		height: 13px;
+		display: inline-block;
+		vertical-align: text-top;
+		background-repeat: no-repeat;
+		background-image: url(https://abs.twimg.com/a/1379560497/t1/img/twitter_web_sprite_icons.png);
+	}
+
+	.action-reply {
+		background-position: 0 -190px;
+	}
+	.action-retweet {
+		background-position: -20px -190px;
+		width: 14px;
+		height: 13px;
+	}
+	.action-favorite {
+		background-position: -40px -190px;
+		width: 10px;
+	}
+	.action-more {
+		background-position: -280px -190px;
+		width: 15px;
+	}
+
+	.stats {
+		margin: 12px 0 12px 42px;
+		border-top: 1px solid #e8e8e8;
+	}
+		.stats, .stats div {
+			box-sizing: border-box;
+		}
+		.num-retweets, .num-favorites {
+			font-weight: bold;
+			font-size: 14px;
+			text-align: left;
+		}
+		.users-interact, .retweets, .favorites {
+			display: inline-block;
+			height: 45px;
+			text-align: center;
+			box-sizing: border-box;
+			padding: 5px;
+			padding-bottom: 8px;
+		}
+
+		.retweets, .favorites {
+			font-size: 10px;
+			border-right: 1px solid #e8e8e8;
+		}
+
+		.users-interact img {
+			margin-top: 6px;
+			margin-left: 5px;
+			width: 32px; height: 32px;
+		}
+
+		.time {
+			clear: both;
+			font-size: 12px;
+			color: #999;
+			border-top: 1px solid #e8e8e8;
+			padding-top: 10px;
+		}
+
+		.reply {
+			position: relative;
+			clear: both;
+			padding-left: 43px;
+		}
+			.reply .avatar {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+

@@ -1,33 +1,58 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 	<head>
-		<link rel="stylesheet" href="styles.css" type="text/css" />
+		<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
 	</head>
 	<body>
-		<div class="page-container">
-			<div class="dashboard">
-				<div class="profile-summary">
+		<div id="page-container">
+			<div id="dashboard">
+				<div id="profile-summary">
 					<div class="content">
-						<img class='avatar' src='https://si0.twimg.com/profile_images/1482831577/vendetta_headshot.jpg' />
+						<img class='avatar' src='img/alagoon.jpg' />
 						<p>Your Name Here</p>
 					</div>
 				</div>
-				<div class="tweet-content">
+				<div id="tweet-content">
+
+					<!-- STEP 2: When the user clicks on the textarea, the textarea should double in size and the character count and Tweet buttons should be revealed. -->
+					<!-- HINT: jQuery ".on" eventHandler -->
 					<textarea class="tweet-compose" placeholder="Compose new Tweet..."/></textarea>
-					<div class="tweet-controls">
-						<div class="char-count">140</div>
-						<button disabled>Tweet</button>
+
+					<!-- STEP 1: Initially, the Tweet button and the character count button below should be hidden. -->
+					<!-- HINT: Use CSS -->
+					<div id="tweet-controls">
+
+						<!-- STEP 3: As the user types the character count should decrease. Once it hits 10 character or less the count should turn red -->
+						<!-- HINT: jQuery keypress events (keypress, keydown, keyup, etc) -->
+						<div id="char-count">140</div>
+
+						<!-- STEP 4: If the user puts in more than 140 characters, the tweet button should be disabled (and re-enabled when there are <= 140 chars) -->
+						<!-- HINT: javascript length method -->
+						<button class="button" id="tweet-submit">Tweet</button>
 					</div>
 				</div>
 			</div>
-			<div class="main">
+			<div id="main">
 				<h2>Tweets</h2>
-				<div class="stream">
+				<div id="stream">
+
+					<!-- STEP 5: When the user successfully inputs characters and clicks the “Tweet” button, a new tweet should be created and added to the tweet stream in the main column, using the user’s fake profile image in the top left and username/fullname. -->
+					<!-- HINT: jQuery ".prepend" method -->
 					<div class="tweet">
 						<div class="content">
-							<img class="avatar" src="https://si0.twimg.com/profile_images/3609491522/388703f14207ddbb9d4f7e56f6644835_normal.png" />
+							<img class="avatar" src="img/damenleeturks.jpg" />
 							<strong class="fullname">My BFF</strong>
 							<span class="username">@mybff</span>
+
+							<!-- BLACK DIAMOND: Implement the icons for when a tweet is favorited/retweeted in the upper right of the tweet. -->
+							<!-- HINT: Add to what you created in Step 5 -->
 							<p class="tweet-text">Today is an amazing day.</p>
+
+							<!-- STEP 6: The tweet actions below should only show up when you hover over the tweet. Otherwise, they should be hidden. -->
+							<!-- HINT: CSS ":hover" pseudo element -->
 							<div class="tweet-actions">
 								<ul>
 									<li><span class="icon action-reply"></span> Reply</li>
@@ -36,6 +61,9 @@
 									<li><span class="icon action-more"></span> More</li>
 								</ul>
 							</div>
+
+							<!-- STEP 7: The Retweets/timestamp/Reply areas below should also be hidden by default. These should only expand if you click on the tweet. Use a jQuery animation to accomplish the reveal, similar to how it’s done on Twitter.com -->
+							<!-- HINT: jQuery ".on" eventHandler -->
 							<div class="stats">
 								<div class="retweets">
 									<p class="num-retweets">30</p>
@@ -47,23 +75,30 @@
 								</div>
 								<div class="users-interact">
 									<div>
-										<img src="https://si0.twimg.com/profile_images/378800000440426100/9e19b57a0794bc7d78b7e8c0909d0a76_normal.jpeg" />
-										<img src="https://si0.twimg.com/profile_images/718418316/b_normal.jpg" />
+
+										<!-- BLACK DIAMOND: Implement the Bootstrap tooltips for when you hover over a user’s avatar image -->
+										<!-- HINT: Bootstrap has good documentation =) -->
+										<img src="img/alagoon.jpg" />
+										<img src="img/vklimenko.jpg" />
 									</div>
 								</div>
+
+								<!-- BLACK DIAMOND: Make the timestamp below similar to how they look on Twitter (1h, 18m, 1m) and use the jQuery timeago plugin to make them automatic. -->
+								<!-- HINT: Refer to timeago documentation -->
 								<div class="time">
 									1:04 PM - 19 Sep 13
 								</div>
 							</div>
 							<div class="reply">
-								<img class="avatar" src="https://si0.twimg.com/profile_images/1482831577/vendetta_headshot.jpg" />
+								<img class="avatar" src="img/alagoon.jpg" />
 								<textarea class="tweet-compose" placeholder="Reply to @mybff"/></textarea>
 							</div>
 						</div>
-					</div>
+					</div><!-- .tweet -->
+
 					<div class="tweet">
 						<div class="content">
-							<img class="avatar" src="https://si0.twimg.com/profile_images/3654358881/476bd54bd9c2bc0f9a38b4e097ce6af5_normal.jpeg" />
+							<img class="avatar" src="img/funwatercat.jpg" />
 							<strong class="fullname">The Onion</strong>
 							<span class="username">@theonion</span>
 							<p class="tweet-text">“I'm able to speak confidently about a wide range of subjects, so it’s probably hard for most women to follow.” http://onion.com/1aWfKwf </p>
@@ -86,8 +121,8 @@
 								</div>
 								<div class="users-interact">
 									<div>
-										<img src="https://si0.twimg.com/profile_images/378800000440426100/9e19b57a0794bc7d78b7e8c0909d0a76_normal.jpeg" />
-										<img src="https://si0.twimg.com/profile_images/718418316/b_normal.jpg" />
+										<img src="img/jennyshen.jpg" />
+										<img src="img/damenleeturks.jpg" />
 									</div>
 								</div>
 								<div class="time">
@@ -95,14 +130,15 @@
 								</div>
 							</div>
 							<div class="reply">
-								<img class="avatar" src="https://si0.twimg.com/profile_images/1482831577/vendetta_headshot.jpg" />
+								<img class="avatar" src="img/alagoon.jpg" />
 								<textarea class="tweet-compose" placeholder="Reply to @mybff"/></textarea>
 							</div>
 						</div>
-					</div>
+					</div><!-- .tweet -->
+
 					<div class="tweet">
 						<div class="content">
-							<img class="avatar" src="https://si0.twimg.com/profile_images/661586716/favicon_64_normal.png" />
+							<img class="avatar" src="img/jennyshen.jpg" />
 							<strong class="fullname">Harvard Biz Review</strong>
 							<span class="username">@HarvardBiz</span>
 							<p class="tweet-text">It is possible to work with a loved one without ruining the relationship http://s.hbr.org/15FDIri </p>
@@ -125,8 +161,8 @@
 								</div>
 								<div class="users-interact">
 									<div>
-										<img src="https://si0.twimg.com/profile_images/378800000440426100/9e19b57a0794bc7d78b7e8c0909d0a76_normal.jpeg" />
-										<img src="https://si0.twimg.com/profile_images/718418316/b_normal.jpg" />
+										<img src="img/vklimenko.jpg" />
+										<img src="img/funwatercat.jpg" />
 									</div>
 								</div>
 								<div class="time">
@@ -134,13 +170,13 @@
 								</div>
 							</div>
 							<div class="reply">
-								<img class="avatar" src="https://si0.twimg.com/profile_images/1482831577/vendetta_headshot.jpg" />
+								<img class="avatar" src="img/alagoon.jpg" />
 								<textarea class="tweet-compose" placeholder="Reply to @mybff"/></textarea>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+					</div><!-- .tweet -->
+				</div><!-- #stream -->
+			</div><!-- #main -->
+		</div><!-- #page-container -->
 	</body>
 </html>
