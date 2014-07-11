@@ -3,6 +3,7 @@ Use this repo as the starting point for the Twitter clone project:
 ## PART ONE ##
 * Fork the repo
 * Get familiar with the html/css
+* Right before your closing body tag, link to your jQuery found in the js folder.
 * Create a animations.js file and then link to it right before your the closing body tag
 * Use jQuery to add the following features:
   * Initially, the Tweet button and the character count button should be hidden (CSS).
