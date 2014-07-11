@@ -3,7 +3,6 @@ Use this repo as the starting point for the Twitter clone project:
 ## PART ONE ##
 * Fork the repo
 * Get familiar with the html/css
-* Modify the HTML to use HTML5 elements where appropriate (https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list)
 * Use jQuery to add the following features:
   * Initially, the Tweet button and the character count button should be hidden (CSS).
   * When the user clicks on the textarea, the textarea should double in size and the character count and Tweet buttons should be revealed.
