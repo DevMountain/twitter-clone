@@ -33,7 +33,7 @@ Use this repo as the starting point for the Twitter clone project:
 * $(‘idOrClass’).prepend(myNameEle);
 * $(‘idOrClass’).append(myNameEle) / myNameEle.$appendTo($(‘idOrClass’))
 * $(‘idOrClass’).remove();
-* $(‘idOrClass’).on(‘<event>’, function(){}); http://api.jquery.com/category/events/
+* $(‘idOrClass’).on(‘\<event>’, function(){}); http://api.jquery.com/category/events/
 * $(this)
 * $(‘idOrClass’).val() //input, textarea, select
 * $(‘idOrClass’).html()
