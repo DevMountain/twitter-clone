@@ -22,3 +22,22 @@ Use this repo as the starting point for the Twitter clone project:
 * Implement the icons for when a tweet is favorited/retweeted in the upper right of the tweet.
 * Implement the Bootstrap tooltips for when you hover over a user’s avatar image
 
+
+
+### Here's a list of (in my opinion) the jQuery 'Need to Knows'
+* $(document).ready(function(){});
+* $(“element”)
+* $(‘‘idOrClass”)
+* $(“idOrClass, idOrClass”)
+*  var myNameEle = $(‘\<span>Tyler McGinnis \</span>’)
+* $(‘idOrClass’).prepend(myNameEle);
+* $(‘idOrClass’).append(myNameEle) / myNameEle.$appendTo($(‘idOrClass’))
+* $(‘idOrClass’).remove();
+* $(‘idOrClass’).on(‘<event>’, function(){}); http://api.jquery.com/category/events/
+* $(this)
+* $(‘idOrClass’).val() //input, textarea, select
+* $(‘idOrClass’).html()
+* $(‘idOrClass’).text()
+* $(‘idOrClass’).find()
+* $(‘idOrClass’).show() // .hide();
+* $(this).toggleClass(‘className’);
