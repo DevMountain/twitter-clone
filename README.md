@@ -39,6 +39,7 @@ Use this repo as the starting point for the Twitter clone project:
 * $(this)
 * $(‘idOrClass’).val() //input, textarea, select
 * $(‘idOrClass’).html()
+* $('idOrClass').css()
 * $(‘idOrClass’).text()
 * $(‘idOrClass’).find()
 * $(‘idOrClass’).show() // .hide();
