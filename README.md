@@ -27,20 +27,49 @@ Use this repo as the starting point for the Twitter clone project:
 
 
 ### Here's a list of (in my opinion) the jQuery 'Need to Knows'
-* $(document).ready(function(){});
-* $(“element”)
-* $(‘‘idOrClass”)
-* $(“idOrClass, idOrClass”)
-*  var myNameEle = $(‘\<span>Tyler McGinnis \</span>’)
-* $(‘idOrClass’).prepend(myNameEle);
-* $(‘idOrClass’).append(myNameEle) / myNameEle.$appendTo($(‘idOrClass’))
-* $(‘idOrClass’).remove();
-* $(‘idOrClass’).on(‘\<event>’, function(){}); http://api.jquery.com/category/events/
-* $(this)
-* $(‘idOrClass’).val() //input, textarea, select
-* $(‘idOrClass’).html()
-* $('idOrClass').css()
-* $(‘idOrClass’).text()
-* $(‘idOrClass’).find()
-* $(‘idOrClass’).show() // .hide();
-* $(this).toggleClass(‘className’);
+
+Window Ready Event
+
+* `$(function () {});`
+  * also `$(document).ready(function(){});`
+
+Selectors
+
+* `$(".some-class") // select by classname`
+* `$(this) // the element which created the event`
+* `$('.some-class').find('.some-child-class');`
+* `$('.some-class').closest('.some-parent-class');`
+* See also <http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048>
+
+Events
+
+* `$('body').on('someEvent', '.some-class', function() {});`
+  * <http://api.jquery.com/category/events/>
+  * <https://en.wikipedia.org/wiki/DOM_events#Common.2FW3C_events>
+  * click
+  * keyup
+  * change
+  * load
+  * error
+
+Create Element
+
+* Be cautious <https://www.box.com/blog/securing-jquery-against-unintended-xss/>
+* `var $myNewElement = $('<span>Tyler McGinnis</span>')`
+* `$('.some-class').html('<span>Tyler McGinnis</span>')`
+
+Manipulate Elements
+
+* `$('.some-class').text("my <script>-safe text");`
+* `$('.some-class').val(); //input, textarea, select`
+* `$('.some-class').prop('checked'); // checkbox`
+* `$('.some-class').show();`
+* `$('.some-class').hide();`
+* `$('.some-class').prepend($myNewElement);`
+* `$('.some-class').append($myNewElement);`
+  * also `$myNewElement.appendTo($('.some-class'));`
+* `$('.some-class').remove();`;
+* `$(this).addClass('.style-class');`
+* `$(this).removeClass('.style-class');`
+* `$(this).toggleClass('.style-class');`
+* `$('.some-class').css({}); // misnomer, actually changes 'style' attribute`
