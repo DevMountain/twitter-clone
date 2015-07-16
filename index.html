@@ -2,7 +2,10 @@
 <html lang="en-US">
 	<head>
 		<meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<!-- if you want to add external scripts, add them to script-src -->
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://code.jquery.com/; img-src *">
+    
 
 		<link rel="stylesheet" href="css/styles.css" type="text/css" />
 	</head>
