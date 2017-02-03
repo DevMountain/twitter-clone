@@ -32,7 +32,7 @@ Use this repo as the starting point for the Twitter clone project:
 * Implement the icons for when a tweet is favorited/retweeted in the upper right of the tweet.
 * Implement the Bootstrap tooltips for when you hover over a user’s avatar image
 * Persist new tweets using local storage
-* Persist new tweets using a service like parse https://parse.com/
+* Persist new tweets using a service like firebase https://firebase.google.com/
 
 
 ### Here's a list of the jQuery 'Need to Knows'
