@@ -7,8 +7,10 @@ Twitter Clone
 Use jQuery to create a "clone" that mimicks how the Twitter web application functions
 
 Use this repo as the starting point for the Twitter clone project:
+<p align="center">
+  <img src="https://github.com/DevMountain/twitter-clone/blob/master/Twitter%20Clone%20Example.png?raw=true,"Twitter Clone Example">
+</p>
 
-![alt text](https://github.com/DevMountain/twitter-clone/blob/master/Twitter%20Clone%20Example.png?raw=true,"Twitter Clone Example")
 
 ## Part One
 * Fork the repo
